@@ -1,6 +1,5 @@
 .navbar {
   background-color: $white;
-  border-bottom: 1px solid $blue-light;
   display: block;
   flex-flow: column;
   padding: 0;
@@ -16,7 +15,8 @@
 .navbar__content {
   @extend .container;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
   @include media-breakpoint-down(xs) {
     justify-content: center !important;
   }
@@ -32,7 +32,6 @@
 
   @include media-breakpoint-down(xs) {
     max-width: 164px;
-    display: none;
   }
 }
 
@@ -46,11 +45,12 @@
 }
 
 .navbar-cta {
-  margin: 0 auto 0 20px;
+  margin: 0 auto;
   padding: 3px 0 4px 20px;
-  color: darken($--color-lighter-blue-new, 2%);
-  border-left: 1px solid $--color-light-blue-new;
-  line-height: 1.4;
+  color: darken($--color-text-regular, 2%);
+  line-height: 24px;
+  font-size: 16px;
+
   @include media('<navbarLg') {
     display: none;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-.is-authorized + .navbar__content {
+.is-authorized+.navbar__content {
   .navbar-navigation {
     justify-content: flex-end;
   }

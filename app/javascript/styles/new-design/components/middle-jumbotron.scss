@@ -1,0 +1,141 @@
+.middle-jumbotron {
+    position: relative;
+    background: url("/assets/pattern-light.svg") $blue-sky;
+    color: $white;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    max-width: 1320px;
+    margin: 0 auto;
+    border-radius: 32px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+
+
+    @include media-breakpoint-down(md) {
+        padding: 2.5rem 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: $primary;
+        font-size: 3rem;
+        line-height: 3.6rem;
+    }
+
+    h3 {
+        color: $primary;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &.middle-jumbotron-full-image {
+        padding: 0;
+
+        @include media-breakpoint-down(md) {
+            padding: 25px 0 0 0;
+        }
+
+        .middle-jumbotron-image {
+            position: static;
+            bottom: auto;
+            left: auto;
+            max-width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+.middle-jumbotron__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+        justify-content: center;
+    }
+}
+
+.middle-jumbotron__text {
+    position: relative;
+    z-index: 2;
+    max-width: 48rem;
+    padding: 2.875rem 1rem 0 3.5rem;
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding: 0;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 174px;
+        height: 24px;
+        left: 61%;
+        bottom: 42%;
+        background-image: url("/assets/vector-blue.svg");
+        background-repeat: no-repeat;
+
+    }
+}
+
+.middle-jumbotron__text--wide {
+    max-width: 48rem;
+    padding: rem(40px) 0;
+
+    @include media('>sm') {
+        padding: rem(80px) 2rem;
+    }
+}
+
+.middle-jumbotron__img {
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.middle-jumbotron-image {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    max-width: none;
+    z-index: 1;
+}
+
+.middle-jumbotron__cta {
+    margin-top: 2rem;
+    display: inline-block;
+    padding-bottom: 62px;
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 30px;
+    }
+
+    p {
+        margin-top: 0.8em;
+        margin-bottom: 0;
+        text-align: center;
+
+        &::before {
+            margin-right: 7px;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.emphasize {
+    display: block;
+    font-size: 40px;
+    line-height: 50px;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 15px;
+}

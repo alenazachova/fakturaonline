@@ -1,6 +1,11 @@
 .block {
-  padding-top: 6.5333rem;
-  padding-bottom: 6.5333rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .block--top-md {

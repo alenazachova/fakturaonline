@@ -1,4 +1,7 @@
 cs:
+  date:
+    month_names:
+      [~, leden, únor, březen, duben, květen, červen, červenec, srpen, září, říjen, listopad, prosinec]
   root:
     index:
       meta:
@@ -12,12 +15,8 @@ cs:
       feature_proforma_title: Elektronická evidence tržeb integrována
       feature_signature_text: Pro zasílání elektronické faktury e-mailem ji nemusíte opatřit elektronickým podpisem. PDF faktura je platný doklad, stejně jako papírová faktura. Elektronickým podpisem by se musela faktura opatřit pouze v případě, že ji chcete pro účely účetnictví uchovávat v elektronické podobě - bez nutnosti tisku do papírové podoby.
       feature_signature_title: Žádný elektronický podpis na faktuře nepotřebujete!
-      free_invoice: Vystavujte faktury zdarma za méně než 30 vteřin.
-      header_headline: Vystavujte faktury <br/><span class=emphasize>rychle a bezpečně</span>
+      header_headline: s námi zvládne fakturovat každý <span class=emphasize>bezpečně a zdarma za méně než 30 vteřin</span>
       header_headline_alt: Vystavujte faktury <span class=emphasize>rychle a bezpečně</span>
-      header_list1: Nejrychlejší vystavení faktur online.
-      header_list2: Doklady jsou ihned připraveny ke stažení ve formátu Adobe PDF.
-      header_list3: K dispozici všechny druhy dokladů - zálohová a proforma faktura, daňový doklad pro plátce i neplátce DPH a další
       header_text: Vystavujete faktury dle vzoru v Excelu? <span class='emphasize'>Faktura z FakturaOnline.cz je mnohem více než jen vzor faktury</span>. Její vystavení je snadné, rychlé a vystavená faktura je ve formátu Adobe PDF - populárním univerzálním dokumentovém formátu. Stačí zadat pár údajů do formuláře a ihned máte připravenou PDF fakturu ke stažení.
       start_using: Začněte ZDARMA využívat FakturaOnline.cz
       stats_area_text_2: vystavili naši uživatelé za %{month}
@@ -25,45 +24,61 @@ cs:
       stats_area_text_4: nám zachovává přízeň
       stats_area_text_5: na kterých působíme
       stats_area_title_2: "%{amount} faktur"
-      stats_area_title_3: "%{amount}"
+      stats_area_title_3: "%{amount} Kč"
       stats_area_title_4: "%{amount} uživatelů"
       stats_area_title_5: 5 trhů
       recent_posts: Aktuálně z blogu
+      invoices_now: Doklady ihned připraveny ve formátu PDF
+      invoice_form: Zálohová a proforma faktura, daňový doklad pro plátce i neplátce DPH a další
+      start_cta: Začněte fakturovat ZDARMA
+      cta_time: První fakturu vystavíte  do 5 minut
+      start_now: S námi zvládne fakturovat úplně každý
+      template_invoices: Vzory faktur
+      price_list: Ceník
+      instructions: Návody
+      news: Novinky
+      i_have_problem: Mám problém
+      business_newsletter: Podnikatelský zpravodaj
+    form:
+      basic_info: Základní údaje
   application:
     navigation:
-      free_in_30_seconds_html: Vystavujte faktury <strong>zdarma</strong> za méně než 30 vteřin.
+      free_in_30_seconds_html: Vystavujte faktury zdarma za méně než 30 vteřin.
       homepage: Úvod
       invoice: Vystavit fakturu
       login: Přihlásit se
       logo_alt: FakturaOnline.cz
+      instructions: Návody
+      news: Novinky
+      i_have_problem: Mám problém
+      business_newsletter: Podnikatelský zpravodaj
       logo_height: 13
       logo_width: 229
     footer:
       company_name_html: FakturaOnline&nbsp;s.r.o.
-      heading_1: Sledujte nás
-      heading_2: Návody
-      heading_3: Důležité dokumenty
-      heading_4: Další informace
-      heading_5: Pro vývojaře
-      heading_6: Migrace faktur z
-      heading_7: Podpora
-      link_1: Smluvní podmínky
-      link_10: Blog
-      link_11: Facebook
-      link_12: LinkedIn
-      link_13: Manuál
-      link_14: API
-      link_15: BillApp
-      link_16: O nás
+      heading_1: Návody
+      heading_2: Další informace
+      heading_3: Dokumenty na 💩
+      heading_4: Pro vývojaře
+      heading_5: Migrace faktur z
+      heading_6: Sledujte nás na
+      heading_7: Sledujte nás na
+      link_1: Vzory Word a Excel
+      link_10: Smluvní podmínky
+      link_11: Ochrana osobních údajů
+      link_12: Cookie policy
+      link_13: API
+      link_14: BillApp
+      link_15: Facebooku
+      link_16: Linkedinu
       link_17: Vzory Word a Excel
       link_18: Začínající podnikatelé
-      link_2: Ceník
-      link_3: Ochrana osobních údajů
-      link_4: Nápověda
-      link_5: Vzory faktur
-      link_6: Cookie Policy
-      link_7: Často kladené otázky
+      link_2: Reporty
+      link_3: Faktury
+      link_4: Často kladené otázky
+      link_5: Nápověda
+      link_6: Neziskové organizace
+      link_7: O nás
       link_8: Kontaktujte nás
-      link_9: Neziskové organizace
-      select_region: "Zvolte region:"
-      support_link: https://podpora.fakturaonline.cz
+      link_9: Začínající podnikatelé
+      footer_email: podpora@fakturaonline.cz

@@ -7,9 +7,7 @@
       class="row row--flex block"
       v-if="isDataLoaded && hasAnyPosts"
     >
-      <h2>
-        {{ $t('blog.title') }}
-      </h2>
+
 
       <div
         v-for="post in collection"
@@ -24,7 +22,7 @@
             <img
               :src="post.smallImage"
               :alt="post.title"
-              width="500"
+              width="387"
               height="280"
             >
           </div>
@@ -33,12 +31,9 @@
               {{ post.title }}
             </h3>
             <div class="blog-cart__date">
-              {{ $t('blog.published') }} {{ post.createdAt | formatDate('dd. MM. yyyy') }}
+              {{ post.createdAt | formatDate('dd. MM. yyyy') }}
             </div>
             <p>{{ post.perex }}</p>
-            <div class="blog-cart__cta">
-              {{ $t('blog.read') }}
-            </div>
           </div>
         </a>
       </div>
@@ -133,12 +128,16 @@ export default {
 
   .blog-cart__wrapper {
     position: relative;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    width: 33.333%;
+    padding-right: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.75rem;
 
     @media (max-width: 1200px) {
       width: 50%;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     @media (max-width: 768px) {
@@ -155,10 +154,9 @@ export default {
   }
 
   .blog-cart__content {
-    padding: 2.33rem 2.66rem;
+    padding-top: 1rem;
     background: #ffffff;
-    flex: 0 0 70%;
-    max-width: 70%;
+    max-width: 100%;
     border-radius: 0 4px 4px 0;
 
     @media (max-width: 1200px) {
@@ -174,8 +172,7 @@ export default {
   }
 
   .blog-cart__img {
-    flex: 0 0 30%;
-    max-width: 30%;
+   width: 100%;
     position: relative;
     background-color: #c4e4f3;
     border-radius: 4px 0 0 4px;
@@ -187,13 +184,10 @@ export default {
 
     img {
       margin: 0 auto;
-      display: table;
-      @media (min-width: 1200px) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+      height: auto;
+      display: block;
+      width: 100%;
+
     }
   }
 
@@ -211,7 +205,7 @@ export default {
     margin-top: 0;
     margin-bottom: 0.33rem;
     color: #057ec2;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2rem;
     text-decoration: underline;
   }

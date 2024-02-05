@@ -1,7 +1,20 @@
 div.navbar
   .navbar__content
-    = link_to root_path, class: 'navbar__brand'
-      = image_tag "fakturaonline_logo.svg", class: 'navbar__logo', alt: t('.logo_alt'), width: t('.logo_width'), height: t('.logo_height')
-    ul.navbar-navigation
-      span.navbar-cta = t('.free_in_30_seconds_html')
-      = link_to_menu_item :li, t('.invoice'), root_path, class: 'el-button el-button--warning navbar-navigation__link--invoice', wrapper_options: { class: 'navbar-navigation__item navbar-navigation__item--new-invoice' }
+    .navigation
+      = link_to root_path, class: 'navbar__brand'
+        = image_tag "fakturaonline_logo.svg", class: 'navbar__logo', alt: t('.logo_alt'), width: t('.logo_width'), height: t('.logo_height')
+      ul.navbar-navigation
+        span.navbar-cta = t('.free_in_30_seconds_html')
+
+        = link_to_menu_item :li, t('.invoice'), root_path, class: 'el-button el-button--warning navbar-navigation__link--invoice', wrapper_options: { class: 'navbar-navigation__item navbar-navigation__item--new-invoice' }
+          = image_tag 'invoice-ico.svg',class:'button-ico', width: '24', height: '24',class:'button-ico'
+        = link_to_menu_item(:li, t('.login'), root_path, class: 'el-button navbar-navigation__link--invoice', wrapper_options: { class: 'navbar-navigation__item navbar-navigation__item--new-invoice' }) do
+          = image_tag 'acount.svg', width: '24', height: '24', class:'button-ico'
+
+
+    .up-subnavigation
+      ul.navbar-subnavigation
+        = link_to_menu_item :li, t('.news'), root_path, class: 'blue-button', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.instructions'), root_path, class: 'blue-button', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.i_have_problem'), root_path, class: 'blue-button', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.business_newsletter'), root_path, class: 'blue-button', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }

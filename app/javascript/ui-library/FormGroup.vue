@@ -163,6 +163,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: rem(20px);
+  flex:0 1 calc(50% - 8px);
   &::before,
   &::after {
     display: none;
@@ -372,7 +373,7 @@ export default {
 }
 
 .el-form-item__label {
-  font-weight: 700;
+  font-weight: 400;
   float: none;
   padding-top: rem(9px);
   text-align: left;
@@ -441,6 +442,7 @@ export default {
 
   .el-form-item__label {
     font-weight: 400;
+    font-size: 0.875rem;
     position: absolute;
     top: -12px;
     left: 8px;

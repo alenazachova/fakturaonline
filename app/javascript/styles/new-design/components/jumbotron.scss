@@ -1,17 +1,53 @@
+.jumbotron-bg {
+  position: relative;
+
+  &::after {
+    background: url("/assets/arrow-01.svg");
+    content: "";
+    width: 300px;
+    position: absolute;
+    height: 316px;
+    left: 50px;
+    bottom: -63px;
+    height: 300px;
+
+    @media (max-width: 1700px) {
+      content: none;
+    }
+
+  }
+}
+
 .jumbotron {
   position: relative;
-  background-color: $primary;
+  background: url("/assets/pattern-dark.svg") $primary;
   color: $white;
   overflow: hidden;
   margin-bottom: 0;
   padding-top: 1rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  border-radius: 32px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+
+
 
   @include media-breakpoint-down(md) {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   h1 {
     color: $white;
+    font-size: 3.5rem;
+    line-height: 67.2px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 2.5rem;
+    }
+
   }
 
   &.jumbotron-full-image {
@@ -35,6 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @include media-breakpoint-down(md) {
     justify-content: center;
   }
@@ -44,15 +81,31 @@
   position: relative;
   z-index: 2;
   max-width: rem(565px);
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem 0 3.5rem;
 
   @include media-breakpoint-down(md) {
+    padding: 0;
     max-width: 100%;
   }
 
   @include media-breakpoint-down(sm) {
     width: 100%;
     padding: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 29%;
+    width: 174px;
+    height: 24px;
+    background-image: url("/assets/vector-white.svg");
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(md) {
+      content: none;
+    }
   }
 }
 
@@ -66,7 +119,7 @@
 }
 
 .jumbotron__img {
-  @include media-breakpoint-down(md) {
+  @media (max-width: 1200px) {
     display: none;
   }
 }
@@ -83,13 +136,31 @@
   margin-top: 3.13rem;
   display: inline-block;
 
+  @include media-breakpoint-down(md) {
+    margin-top: 2.13rem;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 0.5rem;
+  }
+
   p {
     margin-top: 0.8em;
     margin-bottom: 0;
     text-align: center;
+
     &::before {
       margin-right: 7px;
       vertical-align: bottom;
     }
   }
+}
+
+.emphasize {
+  display: block;
+  font-size: 40px;
+  line-height: 50px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 15px;
 }

@@ -26,7 +26,8 @@ export default {
   }
   .el-input {
     .el-select__caret {
-      color: $--color-white;
+      color: $--color-primary;
+      font-weight: bold;
     }
   }
 
@@ -38,7 +39,6 @@ export default {
   .el-input__suffix {
     width: rem(32px);
     right: 0;
-    background-color: $--color-primary;
     border-radius: 0 4px 4px 0;
     .el-input__icon {
       font-weight: 700;

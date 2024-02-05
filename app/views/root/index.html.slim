@@ -1,21 +1,25 @@
-.block.jumbotron
-  .block__content
-    .jumbotron__content
-      .jumbotron__text
-        h1.h1 == t '.header_headline'
-        ul.list-highlights
-          li.list-highlights__item.list-highlights__item--icon == t '.header_list1'
-          li.list-highlights__item.list-highlights__item--icon == t '.header_list2'
-          li.list-highlights__item.list-highlights__item--icon == t '.header_list3'
-        .jumbotron__cta
-          = link_to t('.add_invoice'), root_path, class: 'el-button el-button--warning el-button--large el-button--invoice'
-          p == t '.free_invoice'
-      .jumbotron__img
-        = image_tag "header_image.png",
-                    width: 669,
-                    height: 556,
-                    alt: 'FakturaOnline.cz',
-                    class: 'header__objects-image'
+.jumbotron-bg
+  .block.jumbotron
+    .block__content
+      .jumbotron__content
+        .jumbotron__text
+          h1.h1 == t '.header_headline'
+
+          .jumbotron__cta
+            = link_to root_path, class: 'el-button el-button--warning el-button--large el-button--invoice' do
+              = image_tag "invoice-ico.svg", class: 'navbar__logo', alt: t('.logo_alt'), width: '24', height: '24'
+              = t('.add_invoice')
+        .jumbotron__img
+          = image_tag "girl.svg",
+                      width: 669,
+                      height: 556,
+                      alt: 'FakturaOnline.cz',
+                      class: 'header__objects-image'
+.subnavigation
+      ul.navbar-middle--subnavigation
+        = link_to_menu_item :li, t('.invoices_now'), root_path, class: 'navbar-navigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.invoice_form'), root_path, class: 'navbar-navigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-navigation__item--new-invoice' }
+
 .stats-area__wrapper
   .stats-area
     .stats-area__content
@@ -23,13 +27,13 @@
         h3 10 let
         p působíme na trhu
       .stats-area__single
-        h3 = t '.stats_area_title_2', amount: 10000
+        h3 = t '.stats_area_title_2', amount: number_with_delimiter(67714,delimiter: ' ')
         p == t '.stats_area_text_2', month: I18n.l(1.month.ago, format: "%B").downcase
       .stats-area__single
-        h3 = t '.stats_area_title_3', amount: 50000
+        h3 = t '.stats_area_title_3', amount: number_with_delimiter(23999100, delimiter: ' ')
         p == t '.stats_area_text_3', month: I18n.l(1.month.ago, format: "%B").downcase
       .stats-area__single
-        h3 = t '.stats_area_title_4', amount: 10000
+        h3 = t '.stats_area_title_4', amount: number_with_delimiter(24541,delimiter: ' ')
         p == t '.stats_area_text_4'
       .stats-area__single
         h3 = t '.stats_area_title_5'
@@ -39,37 +43,74 @@
     .hp-features__content
       .hp-features__single
         .hp-features__img
-          = image_tag("export-pdf-ico.svg", alt: t('.feature_pdf_title'), width: 63, height: 71)
+          = image_tag("export-pdf-ico.svg", alt: t('.feature_pdf_title'), width: 72, height: 72)
         .hp-features__text
-          strong Vyplnit formulář a stáhnout PDF fakturu
+          h4 Vyplnit formulář a stáhnout PDF fakturu
           p
             ' Vystavení PDF faktury je jednoduché. Stačí vyplnit své identifikační údaje, které si můžete uložit pro další použití, údaje o odběrateli, přidat fakturované položky a kliknout na <em>Vystavit fakturu</em>. Hotovo
             = link_to 'Vystaví se vám PDF faktura', root_path
             ' , kterou můžete poslat e-mailem, nebo vytisknout.
       .hp-features__single
         .hp-features__img
-          = image_tag("bill-ico.svg")
+          = image_tag("bill-ico.png")
         .hp-features__text
-          strong = t '.feature_proforma_title'
+          h4 = t '.feature_proforma_title'
           p == t '.feature_proforma_text'
       .hp-features__single
         .hp-features__img
           = image_tag("signature-ico.svg")
         .hp-features__text
-          strong = t '.feature_signature_title'
+          h4 = t '.feature_signature_title'
           p == t '.feature_signature_text'
       .hp-features__single
         .hp-features__img
-          = image_tag("layout-ico.svg")
+          = image_tag("layout-ico.png")
         .hp-features__text
-          strong = t '.feature_examples_title'
+          h4 = t '.feature_examples_title'
           p = t '.feature_examples_text_html', link: root_path
+
+.middle-jumbotron
+  .block__content
+    .middle-jumbotron__content
+      .middle-jumbotron__text
+        h2.h2 == t '.start_cta'
+        h3.h3 == t '.cta_time'
+
+        .middle-jumbotron__cta
+          = link_to root_path, class: 'el-button el-button--warning el-button--large el-button--invoice' do
+              = image_tag "invoice-ico.svg", class: 'navbar__logo', alt: t('.logo_alt'), width: '24', height: '24'
+              = t('.add_invoice')
+      .middle-jumbotron__img
+        = image_tag "invoice.svg",
+                    width: 498,
+                    height: 440,
+                    alt: 'FakturaOnline.cz',
+                    class: 'middle-jumbotron-image'
 
 #hp_blogposts
 
-.button-area
-  .container
-    .button-area__content
-      = image_tag('ico-time_start.svg', class: 'button-area__icon', width: 51, height: 50)
-      .button-area__text = t '.start_using'
-      = link_to t('.add_invoice'), root_path, class: 'el-button el-button--warning el-button--large el-button--invoice'
+.down-jumbotron
+  .block__content
+    .down-jumbotron__content
+      .down-jumbotron__text
+        h2.h2 == t '.start_now'
+
+        .down-jumbotron__cta
+          = link_to root_path, class: 'el-button el-button--warning el-button--large el-button--invoice' do
+              = image_tag "invoice-ico.svg", class: 'navbar__logo', alt: t('.logo_alt'), width: '24', height: '24'
+              = t('.add_invoice')
+      .down-jumbotron__img
+        = image_tag "mario.svg",
+                    width: 634,
+                    height: 406,
+                    alt: 'FakturaOnline.cz',
+                    class: 'down-jumbotron-image'
+
+.pre-footer_subnavigation
+      ul.navbar-subnavigation
+        = link_to_menu_item :li, t('.template_invoices'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.price_list'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.news'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.instructions'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.i_have_problem'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }
+        = link_to_menu_item :li, t('.business_newsletter'), root_path, class: 'blue-button navbar-subnavigation__link--invoice', wrapper_options: { class: 'navbar-subnavigation__item navbar-subnavigation__item--new-invoice' }

@@ -25,14 +25,12 @@ $body-color: $gray-800;
 $primary: $blue-500;
 $secondary: $orange-500;
 
-$theme-colors: ();
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-  ),
-  $theme-colors
+$theme-colors: (
 );
+$theme-colors: map-merge(("primary": $primary,
+      "secondary": $secondary,
+    ),
+    $theme-colors);
 
 $body-color: $gray-700;
 $link-color: $gray-700;

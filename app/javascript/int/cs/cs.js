@@ -1,39 +1,38 @@
-import elementLocale from 'element-ui/lib/locale/lang/cs-CZ';
+import elementLocale from "element-ui/lib/locale/lang/cs-CZ";
 
 const messages = {
   cs: {
     blog: {
-      more: 'Další články z blogu →',
-      published: 'Publikováno:',
-      read: 'Přečíst →',
-      title: 'Aktuálně z blogu',
+      more: "Další články z blogu →",
     },
     form: {
       invoiceForm: {
         fields: {
           invoiceKind: {
-            label: 'Druh faktury',
-            inputHelp: 'Věnujte pozornost výběru druhu faktury. Pokud nejste plátci DPH, měli byste zvolit fakturu bez DPH!'
+            label: "Druh faktury",
+            inputHelp:
+              "Věnujte pozornost výběru druhu faktury. Pokud nejste plátci DPH, měli byste zvolit fakturu bez DPH!",
           },
           number: {
-            label: 'Číslo faktury',
-          },
-          vs: {
-            label: 'Variabilní symbol',
+            label:
+              "Číslo faktury, Variabilní symbol Zadat jiný, Evidenční číslo Zadat jiný",
           },
           ks: {
-            label: 'Konstantní symbol',
+            label: "Konstantní symbol (volitelný)",
+          },
+          vs: {
+            label: "Specifický symbol (volitelný)",
           },
           issedOn: {
-            label: 'Datum vystavení',
+            label: "Datum vystavení, Datum zdanitelného plnění Zadat jiné",
           },
           maturity: {
-            label: 'Splatnost',
+            label: "Splatnost",
           },
-        }
+        },
       },
     },
-    ...elementLocale
+    ...elementLocale,
   },
 };
 
