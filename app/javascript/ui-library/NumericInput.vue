@@ -14,6 +14,7 @@ export default {
 
 <style lang="scss">
 .el-input {
+  max-width: 495px;
   &.is-disabled {
     .el-input__inner:disabled {
       font-weight: 700;
@@ -44,7 +45,8 @@ export default {
 
 .el-input--prefix {
   .el-input__inner {
-    padding-left: rem(40px + 8px);
+    padding-right: rem(40px + 8px);
+    padding-left: 1rem;
     &:focus {
       border-color: $--input-border-color;
     }
@@ -58,10 +60,10 @@ export default {
 }
 
 .el-input__prefix {
-  left: 0;
+  left: auto;
+  right: 0;
   width: rem(32px);
   height: 100%;
-  border-right: $--input-border;
   font-size: rem(16px);
   pointer-events: none;
   .el-input__icon {

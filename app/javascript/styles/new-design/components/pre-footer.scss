@@ -1,11 +1,8 @@
-.pre-footer_subnavigation {
-    position: relative;
-    display: flex;
-    width: 100%;
+.subnavigation--pre-footer {
     padding-top: 33px;
 
     @include media-breakpoint-down(md) {
-        padding-top: 15px;
+        padding-top: 0;
     }
 
     @include media-breakpoint-down(xs) {
@@ -13,14 +10,5 @@
         padding-right: 10px;
     }
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        height: 1px;
-        width: 1320px;
-        background: #BBD2E1;
-        transform: translateX(-50%);
-    }
+
 }

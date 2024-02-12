@@ -15,7 +15,7 @@ cs:
       feature_proforma_title: Elektronická evidence tržeb integrována
       feature_signature_text: Pro zasílání elektronické faktury e-mailem ji nemusíte opatřit elektronickým podpisem. PDF faktura je platný doklad, stejně jako papírová faktura. Elektronickým podpisem by se musela faktura opatřit pouze v případě, že ji chcete pro účely účetnictví uchovávat v elektronické podobě - bez nutnosti tisku do papírové podoby.
       feature_signature_title: Žádný elektronický podpis na faktuře nepotřebujete!
-      header_headline: s námi zvládne fakturovat každý <span class=emphasize>bezpečně a zdarma za méně než 30 vteřin</span>
+      header_headline: S námi zvládne fakturovat každý <span class=emphasize>bezpečně a zdarma za méně než 30 vteřin</span>
       header_headline_alt: Vystavujte faktury <span class=emphasize>rychle a bezpečně</span>
       header_text: Vystavujete faktury dle vzoru v Excelu? <span class='emphasize'>Faktura z FakturaOnline.cz je mnohem více než jen vzor faktury</span>. Její vystavení je snadné, rychlé a vystavená faktura je ve formátu Adobe PDF - populárním univerzálním dokumentovém formátu. Stačí zadat pár údajů do formuláře a ihned máte připravenou PDF fakturu ke stažení.
       start_using: Začněte ZDARMA využívat FakturaOnline.cz
@@ -52,6 +52,7 @@ cs:
       news: Novinky
       i_have_problem: Mám problém
       business_newsletter: Podnikatelský zpravodaj
+      business_newsletter_mobile: Zpravodaj
       logo_height: 13
       logo_width: 229
     footer:

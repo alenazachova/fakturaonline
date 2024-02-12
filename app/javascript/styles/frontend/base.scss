@@ -14,7 +14,7 @@ body {
 }
 
 .page-content {
-  & > section {
+  &>section {
     width: 100%;
   }
 }
@@ -32,7 +32,7 @@ hr {
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  border-color: $--color-gray-5;
+  border-color: $border;
 }
 
 p {
@@ -51,6 +51,7 @@ p {
   .el-dropdown-menu__item {
     display: list-item;
   }
+
   .el-dropdown-menu__item--with-icon {
     padding-left: 3.2rem;
   }

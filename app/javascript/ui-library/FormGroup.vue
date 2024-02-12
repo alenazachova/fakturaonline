@@ -28,6 +28,10 @@
       </template>
       <slot />
     </template>
+
+    <template v-if="optional">
+      <span class="el-input__optional">{{$t('form.optional')}}</span>
+    </template>
     <div
       slot="error"
       slot-scope="slotProps"
@@ -99,6 +103,9 @@ export default {
     prop: String,
     label: String,
     inlineForm: Boolean,
+    optional: Boolean,
+    variable: Boolean,
+    registration: Boolean,
     radio: Boolean,
     offset: [Boolean, String],
     vertical: Boolean,
@@ -158,7 +165,10 @@ export default {
 .nowrap {
   white-space: nowrap;
 }
-
+.el-form {
+  display: flex;
+  justify-content: space-between;
+}
 .el-form-item {
   display: flex;
   flex-wrap: wrap;
@@ -203,12 +213,12 @@ export default {
   }
 
   .el-input {
-    max-width: rem(175px);
+    width: 100%;
   }
 
   .el-input,
   .el-button {
-    margin-right: rem(15px);
+    margin-right: 0;
   }
 
   .el-form-item__help {
@@ -477,5 +487,27 @@ export default {
   bottom: 100%;
   transform: scale(.92) translate3d(-9px, 8px, 0);
   color: $--color-text-regular;
+}
+
+.is-floating {
+  font-size: 0.875rem;
+}
+
+.el-input__optional {
+  position: absolute;
+  transform: scale(1);
+  right: 9.5px;
+  bottom: 12px;
+  transition: transform .3s, bottom .3s;
+  color: $blue-lighter;
+  background: #ffffff;
+  padding: 0 .3rem;
+  pointer-events: none;
+  max-width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  bottom: 100%;
+  transform: scale(.92) translate3d(-9px, 8px, 0);
 }
 </style>

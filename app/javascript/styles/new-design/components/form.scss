@@ -29,7 +29,8 @@
 .form-line {
     display: flex;
     justify-content: space-between;
-    max-width: 500px;
+    max-width: 495px;
+    width: 100%;
 }
 
 form {
@@ -43,7 +44,12 @@ form {
 
 
 
-.form-left {
+.form-left,
+.form-right {
+    flex: 0 1 calc(50% - 20px);
 
-    margin-right: 40px;
+    @include media-breakpoint-down(md) {
+        flex: 1 1 100%;
+    }
+
 }

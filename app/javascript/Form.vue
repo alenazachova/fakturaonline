@@ -10,7 +10,7 @@
           :label="$t('form.invoiceForm.fields.invoiceKind.label')"
           :help="$t('form.invoiceForm.fields.invoiceKind.inputHelp')"
           :floatingLabel=true
-          :hasInputValue=!!resource.number
+          :hasInputValue=!!resource.invoiceKind
         >
           <template v-slot="{ slotHandleFocus, slotHandleBlur }">
           <Select
@@ -45,36 +45,42 @@
         </FormGroup>
 
       <div class="form-line">
-
         <FormGroup
           prop="ks"
           :label="$t('form.invoiceForm.fields.ks.label')"
           :floatingLabel=true
-          :hasInputValue=!!resource.number
+          :optional=true
+          :hasInputValue=!!resource.ks
         >
           <template v-slot="{ slotHandleFocus, slotHandleBlur }">
           <TextInput
             name="ks"
             type="string"
             v-model="resource.ks"
+            @focus="slotHandleFocus"
+            @blur="slotHandleBlur"
           />
           </template>
         </FormGroup>
 
         <FormGroup
-          prop="vs"
-          :label="$t('form.invoiceForm.fields.vs.label')"
+          prop="ss"
+          :label="$t('form.invoiceForm.fields.ss.label', )"
           :floatingLabel=true
-          :hasInputValue=!!resource.number
+          :optional=true
+          :hasInputValue=!!resource.ss
         >
           <template v-slot="{ slotHandleFocus, slotHandleBlur }">
           <TextInput
-            name="vs"
+            name="ss"
             type="string"
-            v-model="resource.vs"
+            v-model="resource.ss"
+            @focus="slotHandleFocus"
+            @blur="slotHandleBlur"
           />
           </template>
         </FormGroup>
+
       </div>
     </div>
 
@@ -83,36 +89,45 @@
           input-narrow
           prop="issedOn"
           :label="$t('form.invoiceForm.fields.issedOn.label')"
+          :floatingLabel=true
+          :hasInputValue=!!resource.issedOn
         >
+        <template v-slot="{ slotHandleFocus, slotHandleBlur }">
           <DatePicker
             v-model="resource.issedOn"
             value-format="timestamp"
+            format="dd. MM. yyyy"
+            align="right"
             :clearable="false"
+            @focus="slotHandleFocus"
+            @blur="slotHandleBlur"
           />
+        </template>
         </FormGroup>
-
-        <FormGroup
-          prop="invoiceKind"
-          :label="$t('form.invoiceForm.fields.maturity.label')"
-          :floatingLabel=true
-          :hasInputValue=!!resource.number
-        >
-          <template v-slot="{ slotHandleFocus, slotHandleBlur }">
-          <Select
-            v-model="resource.maturityKind"
-            :placeholder="$t('form.invoiceForm.fields.maturity.label')"
-            name="maturityKind"
+        <div class="form-maturity">
+          <FormGroup
+            prop="maturity"
+            :label="$t('form.invoiceForm.fields.maturity.label')"
+            :floatingLabel=true
+            :hasInputValue=!!resource.maturity
           >
-            <Option
-              v-for="option in maturityKinds"
-              :key="option.value"
-              :label="option.name"
-              :value="option.value"
-            />
+            <template v-slot="{ slotHandleFocus, slotHandleBlur }">
+            <Select
+              v-model="resource.maturity"
+              :placeholder="$t('form.invoiceForm.fields.maturity.label')"
+              name="maturity"
+            >
+              <Option
+                v-for="option in maturityKinds"
+                :key="option.value"
+                :label="option.name"
+                :value="option.value"
+              />
 
-          </Select>
-          </template>
-        </FormGroup>
+            </Select>
+            </template>
+          </FormGroup>
+        </div>
       </div>
 
       </Form>
@@ -126,8 +141,8 @@ export default {
   data: () => ({
     resource: {
       number: '',
-      vs: '',
       ks: '',
+      ss: '',
       issedOn: '',
       invoiceKind: 'vat_invoice'
     },

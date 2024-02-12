@@ -33,7 +33,7 @@ export default {
 
   .el-input__inner {
     padding-right: rem(40px);
-    border-color: $--color-primary;
+    // border-color: $--color-primary;
   }
 
   .el-input__suffix {

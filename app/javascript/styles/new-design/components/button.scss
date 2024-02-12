@@ -1,6 +1,8 @@
 .el-button {
   text-decoration: none;
   font-weight: 400;
+  display: flex;
+  align-items: center;
 
   &:hover {
     text-decoration: none;
@@ -71,8 +73,8 @@
 
   @include media-breakpoint-down(xs) {
     min-width: 150px;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     padding-left: .53rem;
     padding-right: .53rem;
     font-size: 1rem;
@@ -146,11 +148,11 @@
 }
 
 .button-ico {
-  padding-right: 8px;
+  margin-right: 8px;
   vertical-align: top;
   display: inline;
 
   @media (max-width: 1200px) {
-    padding-right: 0;
+    margin-right: 0;
   }
 }

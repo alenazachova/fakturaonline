@@ -66,7 +66,7 @@ export default {
     justify-content: center;
     width: 100%;
     pointer-events: none;
-    color: $--color-lighter-blue-new;
+    color: $primary;
     cursor: default;
   }
 }

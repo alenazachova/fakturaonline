@@ -102,7 +102,25 @@
   align-items: center;
 }
 
-.up-subnavigation {
+.text_desktop {
+  display: initial;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+}
+
+.text_mobile {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: initial;
+  }
+
+}
+
+.header-subnavigation {
   display: flex;
   width: 100%;
 

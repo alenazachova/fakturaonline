@@ -200,7 +200,10 @@ export default {
   .blog-cart__cta {
     color: #2980b9;
   }
-
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .h3 {
     margin-top: 0;
     margin-bottom: 0.33rem;

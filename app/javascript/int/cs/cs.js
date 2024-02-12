@@ -6,6 +6,7 @@ const messages = {
       more: "Další články z blogu →",
     },
     form: {
+      optional: "volitelný",
       invoiceForm: {
         fields: {
           invoiceKind: {
@@ -14,17 +15,16 @@ const messages = {
               "Věnujte pozornost výběru druhu faktury. Pokud nejste plátci DPH, měli byste zvolit fakturu bez DPH!",
           },
           number: {
-            label:
-              "Číslo faktury, Variabilní symbol Zadat jiný, Evidenční číslo Zadat jiný",
+            label: "Číslo faktury, Variabilní symbol, Evidenční číslo",
           },
           ks: {
-            label: "Konstantní symbol (volitelný)",
+            label: "Konstantní symbol",
           },
-          vs: {
-            label: "Specifický symbol (volitelný)",
+          ss: {
+            label: "Specifický symbol",
           },
           issedOn: {
-            label: "Datum vystavení, Datum zdanitelného plnění Zadat jiné",
+            label: "Datum vystavení, Datum zdanitelného plnění",
           },
           maturity: {
             label: "Splatnost",
